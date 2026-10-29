@@ -227,29 +227,29 @@ fieldset{border:0;margin-top:12px}legend{font-size:14px;font-weight:500}
 <script>
 /* ============ 店家設定 ============ */
 const CONFIG={
-  deliveryFee:60,            // 外送費
-  freeShipOver:500,          // 滿額免運
+  deliveryFee:60,            
+  freeShipOver:500,          
   deliveryNote:'外送範圍：店家周邊 5 公里內，未達範圍我們會電話聯絡。',
   orderEndpoint:'',          
   paymentUrl:'',             
-  contactEmail:'kiuuy520@gmail.com', // ★ 已替換為您的收件信箱
-  phone:'0912-345-678',      // 顯示在「聯絡我們」頁的電話
+  contactEmail:'kiuuy520@gmail.com', // ★ 您的信箱
+  phone:'0912-345-678',      
   hours:'週二至週日 10:00–19:00',
   address:'○○市○○區○○路 1 號'
 };
 
-/* ============ 商品資料 ============ */
+/* ============ 商品資料 (已替換為線上圖庫，可直接顯示) ============ */
 const P=[
- {id:'c1',t:'cake',n:'可可覆盆子鮮奶油蛋糕',p:150,e:'🍰',bg:'#d9c3b5',img:'images/c1.jpg',d:'可可海綿蛋糕擠上綿密鮮奶油，頂端放一顆新鮮覆盆子。'},
- {id:'c2',t:'cake',n:'黑莓巧克力慕斯',p:180,e:'🫐',bg:'#cfd3d6',img:'images/c2.jpg',d:'白慕斯、巧克力慕斯與餅乾底層層堆疊，頂端點綴黑莓與藍莓。'},
- {id:'c3',t:'cake',n:'紅莓巧克力塔',p:170,e:'🍒',bg:'#e7b9b0',img:'images/c3.jpg',d:'濃郁巧克力塔底，搭配鏡面紅莓球與香草鮮奶油。'},
- {id:'c4',t:'cake',n:'綜合莓果塔',p:180,e:'🍓',bg:'#f3c4c8',img:'images/c4.jpg',d:'酥脆塔皮盛滿草莓、覆盆子、黑莓與藍莓，酸甜鮮明。'},
- {id:'c5',t:'cake',n:'粉紅莓果慕斯',p:160,e:'🌸',bg:'#f6cdd3',img:'images/c5.jpg',d:'粉嫩慕斯方塊，頂端放上草莓、覆盆子與藍莓。'},
- {id:'c6',t:'cake',n:'檸檬白巧克力慕斯',p:160,e:'🍋',bg:'#f4e38a',img:'images/c6.jpg',d:'亮黃檸檬鏡面慕斯，搭配白巧克力片與一顆藍莓。'},
- {id:'c7',t:'cake',n:'栗子蒙布朗',p:170,e:'🌰',bg:'#e3c48e',img:'images/c7.jpg',d:'細緻栗子奶油層層擠成，頂端放上蜜漬栗子。'},
- {id:'c8',t:'cake',n:'雛菊莓果酥塔',p:140,e:'🌼',bg:'#e9b8c4',img:'images/c8.jpg',d:'奶油酥餅底，覆上莓果凍與鮮奶油，裝飾白巧克力雛菊。'},
- {id:'c9',t:'cake',n:'覆盆子雪頂',p:180,e:'❄️',bg:'#e9b2b6',img:'images/c9.jpg',d:'覆盆子慕斯外層裹上莓果脆粒，灑上糖粉，如落雪般。'},
- {id:'c10',t:'cake',n:'黑鑽巧克力',p:170,e:'🍫',bg:'#cbbfb8',img:'images/c10.jpg',d:'黑巧克力鏡面蛋糕，頂端覆盆子餅乾，搭配紅醋栗。'},
+ {id:'c1',t:'cake',n:'可可覆盆子鮮奶油蛋糕',p:150,e:'🍰',bg:'#d9c3b5',img:'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80',d:'可可海綿蛋糕擠上綿密鮮奶油，頂端放一顆新鮮覆盆子。'},
+ {id:'c2',t:'cake',n:'黑莓巧克力慕斯',p:180,e:'🫐',bg:'#cfd3d6',img:'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=80',d:'白慕斯、巧克力慕斯與餅乾底層層堆疊，頂端點綴黑莓與藍莓。'},
+ {id:'c3',t:'cake',n:'紅莓巧克力塔',p:170,e:'🍒',bg:'#e7b9b0',img:'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400&q=80',d:'濃郁巧克力塔底，搭配鏡面紅莓球與香草鮮奶油。'},
+ {id:'c4',t:'cake',n:'綜合莓果塔',p:180,e:'🍓',bg:'#f3c4c8',img:'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80',d:'酥脆塔皮盛滿草莓、覆盆子、黑莓與藍莓，酸甜鮮明。'},
+ {id:'c5',t:'cake',n:'粉紅莓果慕斯',p:160,e:'🌸',bg:'#f6cdd3',img:'https://images.unsplash.com/photo-1519340333755-56e9c1d04579?w=400&q=80',d:'粉嫩慕斯方塊，頂端放上草莓、覆盆子與藍莓。'},
+ {id:'c6',t:'cake',n:'檸檬白巧克力慕斯',p:160,e:'🍋',bg:'#f4e38a',img:'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80',d:'亮黃檸檬鏡面慕斯，搭配白巧克力片與一顆藍莓。'},
+ {id:'c7',t:'cake',n:'栗子蒙布朗',p:170,e:'🌰',bg:'#e3c48e',img:'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=400&q=80',d:'細緻栗子奶油層層擠成，頂端放上蜜漬栗子。'},
+ {id:'c8',t:'cake',n:'雛菊莓果酥塔',p:140,e:'🌼',bg:'#e9b8c4',img:'https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400&q=80',d:'奶油酥餅底，覆上莓果凍與鮮奶油，裝飾白巧克力雛菊。'},
+ {id:'c9',t:'cake',n:'覆盆子雪頂',p:180,e:'❄️',bg:'#e9b2b6',img:'https://images.unsplash.com/photo-1557925923-33b251d59000?w=400&q=80',d:'覆盆子慕斯外層裹上莓果脆粒，灑上糖粉，如落雪般。'},
+ {id:'c10',t:'cake',n:'黑鑽巧克力',p:170,e:'🍫',bg:'#cbbfb8',img:'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=400&q=80',d:'黑巧克力鏡面蛋糕，頂端覆盆子餅乾，搭配紅醋栗。'},
 ];
 
 const imgSrc=x=>(window.PHOTOS&&PHOTOS[x.id])||x.img;
@@ -330,12 +330,11 @@ $('#paneForm').onsubmit=async e=>{
 };
 $('#dClose').onclick=()=>$('#done').classList.remove('on');
 
-/* ============ 3D 轉盤功能修復 ============ */
+/* ============ 3D 轉盤 ============ */
 const stg=$('#stage'),ring=$('#ring'),PW=170;
 let list=[],deg=0,rad=0,ang=0,drag=false,lx=0,moved=0;
 
 function apply(){
-  // 增加寬度防呆，確保視窗寬度改變或切換隱藏時仍可正常渲染
   const stgWidth = stg.clientWidth || window.innerWidth;
   const sc = Math.min(1, stgWidth / (1.6 * rad + PW));
   ring.style.transform=`scale(${sc}) translateZ(${-rad}px) rotateY(${ang}deg)`;
@@ -376,7 +375,7 @@ $('#prev').onclick=()=>go(idx()-1);
 $('#next').onclick=()=>go(idx()+1);
 addEventListener('resize',apply);
 
-/* ============ 頁面切換（首頁／公司介紹／聯絡我們） ============ */
+/* ============ 頁面切換 ============ */
 const PAGES={home:'青檸甜點｜線上訂購',about:'公司介紹｜青檸甜點',contact:'聯絡我們｜青檸甜點'};
 
 function route(){
@@ -385,12 +384,11 @@ function route(){
   document.querySelectorAll('nav a').forEach(a=>{
     if(a.getAttribute('href')==='#'+r)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
   document.title=PAGES[r];scrollTo(0,0);
-  // 當切換回首頁時重新計算 3D 轉盤以避免變形
   if(r==='home') { setTimeout(apply, 50); }
 }
 addEventListener('hashchange',route);
 
-/* ============ 聯絡表單功能 (透過 FormSubmit 寄信) ============ */
+/* ============ 聯絡表單 ============ */
 const info=[['電話',CONFIG.phone],['營業時間',CONFIG.hours],['地址',CONFIG.address]].filter(x=>x[1]);
 $('#info').innerHTML=info.map(([k,v])=>`<li><b>${k}</b><span>${v}</span></li>`).join('');
 $('#info').hidden=!info.length;
@@ -400,13 +398,6 @@ $('#contactForm').onsubmit=async e=>{
   const f=e.target,st=$('#cStatus'),btn=f.querySelector('button'),d=Object.fromEntries(new FormData(f));
   if(d._honey)return;
   st.className='';
-  
-  if(!CONFIG.contactEmail || CONFIG.contactEmail.includes('example.com') || !CONFIG.contactEmail.trim()){
-    st.textContent='目前為示範模式：程式碼中尚未替換成您的收件信箱，訊息不會寄出。';
-    st.className='warn';
-    return;
-  }
-  
   btn.disabled=true;btn.textContent='送出中…';
   try{
     const r=await fetch('https://formsubmit.co/ajax/'+CONFIG.contactEmail.trim(),{method:'POST',
@@ -424,7 +415,7 @@ $('#contactForm').onsubmit=async e=>{
   btn.disabled=false;btn.textContent='送出訊息';
 };
 
-/* ============ 啟動初始化 ============ */
+/* ============ 啟動 ============ */
 function init(){
   $('#aboutImg').src=imgSrc(byId.c7);
   renderGrid();renderCart();build();route();
